@@ -18,7 +18,7 @@
 
     <groupId>at.jhofer</groupId>
     <artifactId>spring-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
 
     <name>spring-pet-clinic</name>
     <description>spring-pet-clinic</description>
@@ -47,7 +47,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:MrSpotmarker/spring-pet-clinic.git</developerConnection>
-      <tag>spring-pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
