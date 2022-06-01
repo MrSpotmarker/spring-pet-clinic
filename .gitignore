@@ -153,3 +153,7 @@ Blog
 About
 /spring-pet-data/target/
 /spring-pet-web/target/
+/spring-pet-data/pom.xml.releaseBackup
+/spring-pet-web/pom.xml.releaseBackup
+/pom.xml.releaseBackup
+/release.properties
