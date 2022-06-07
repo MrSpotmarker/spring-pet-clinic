@@ -15,15 +15,17 @@
 
 package at.jhofer.demo.model;
 
-public class PetType extends BaseEntity {
+import java.io.Serializable;
 
-    private String name;
+public class BaseEntity implements Serializable {
 
-    public String getName() {
-        return name;
+    private Long id;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(Long id) {
+        this.id = id;
     }
 }
