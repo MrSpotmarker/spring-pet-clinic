@@ -1,11 +1,11 @@
 package at.jhofer.demo.services.map;
 
 import at.jhofer.demo.model.Vet;
-import at.jhofer.demo.services.CrudService;
+import at.jhofer.demo.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
