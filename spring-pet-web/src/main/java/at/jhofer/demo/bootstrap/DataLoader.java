@@ -19,8 +19,6 @@ import at.jhofer.demo.model.Owner;
 import at.jhofer.demo.model.Vet;
 import at.jhofer.demo.services.OwnerService;
 import at.jhofer.demo.services.VetService;
-import at.jhofer.demo.services.map.OwnerServiceMap;
-import at.jhofer.demo.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -28,12 +26,11 @@ import org.springframework.stereotype.Component;
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
-
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

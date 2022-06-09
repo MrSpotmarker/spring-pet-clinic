@@ -2,9 +2,11 @@ package at.jhofer.demo.services.map;
 
 import at.jhofer.demo.model.Pet;
 import at.jhofer.demo.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
