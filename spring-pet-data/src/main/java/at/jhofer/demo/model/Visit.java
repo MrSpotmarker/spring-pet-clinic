@@ -15,17 +15,34 @@
 
 package at.jhofer.demo.model;
 
-import java.util.Set;
+import java.time.LocalDate;
 
-public class Owner extends Person {
+public class Visit extends BaseEntity {
+    private LocalDate date;
+    private String desciption;
+    private Pet pet;
 
-    private Set<Pet> pets;
-
-    public Set<Pet> getPets() {
-        return pets;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public String getDesciption() {
+        return desciption;
+    }
+
+    public void setDesciption(String desciption) {
+        this.desciption = desciption;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 }
