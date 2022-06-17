@@ -15,17 +15,14 @@
 
 package at.jhofer.demo.model;
 
-import java.util.Set;
+public class Specialty extends BaseEntity {
+    private String description;
 
-public class Vet extends Person {
-
-    private Set<Specialty> specialties;
-
-    public Set<Specialty> getSpecialties() {
-        return specialties;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSpecialties(Set<Specialty> specialties) {
-        this.specialties = specialties;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
