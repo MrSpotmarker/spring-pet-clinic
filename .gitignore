@@ -157,3 +157,7 @@ About
 /spring-pet-web/pom.xml.releaseBackup
 /pom.xml.releaseBackup
 /release.properties
+/spring-pet-web/src/main/resources/static/resources/css/header.css
+/spring-pet-web/src/main/resources/static/resources/css/petclinic.css
+/spring-pet-web/src/main/resources/static/resources/css/responsive.css
+/spring-pet-web/src/main/resources/static/resources/css/typography.css
