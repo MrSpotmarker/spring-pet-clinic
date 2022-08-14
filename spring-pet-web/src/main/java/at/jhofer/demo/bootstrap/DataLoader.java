@@ -5,9 +5,11 @@ import at.jhofer.demo.model.Pet;
 import at.jhofer.demo.model.PetType;
 import at.jhofer.demo.model.Specialty;
 import at.jhofer.demo.model.Vet;
+import at.jhofer.demo.model.Visit;
 import at.jhofer.demo.services.OwnerService;
 import at.jhofer.demo.services.PetTypeService;
 import at.jhofer.demo.services.VetService;
+import at.jhofer.demo.services.VisitService;
 import at.jhofer.demo.services.map.SpecialtyMapService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -21,13 +23,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyMapService specialtyMapService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-        SpecialtyMapService specialtyMapService) {
+        SpecialtyMapService specialtyMapService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyMapService = specialtyMapService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -89,6 +93,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(fionasPet);
 
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDesciption("Sneezy kitty...");
+
+        visitService.save(catVisit);
 
         System.out.println("Loaded owners...");
 
