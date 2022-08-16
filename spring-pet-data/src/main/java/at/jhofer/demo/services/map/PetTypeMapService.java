@@ -2,11 +2,13 @@ package at.jhofer.demo.services.map;
 
 import at.jhofer.demo.model.PetType;
 import at.jhofer.demo.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 
     @Override

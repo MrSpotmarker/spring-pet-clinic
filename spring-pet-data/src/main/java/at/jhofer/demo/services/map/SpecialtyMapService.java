@@ -2,11 +2,13 @@ package at.jhofer.demo.services.map;
 
 import at.jhofer.demo.model.Specialty;
 import at.jhofer.demo.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
 
     @Override
