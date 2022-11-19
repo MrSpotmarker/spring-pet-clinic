@@ -22,20 +22,13 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
-/*    @InitBinder
-    public void setAllowedFields(WebDataBinder dataBinder) {
-        dataBinder.setDisallowedFields("id");
-    }*/
-
     @GetMapping
     public String StringprocessFindForm(Owner owner, BindingResult result, Model model) {
         if (owner.getLastName() == null) {
             owner.setLastName("");
         }
 
-        List<Owner> results = ownerService.findAllByLastNameLike(owner.getLastName());
-
-        System.out.println("Tets");
+        List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
 
         if (results.isEmpty()) {
             result.rejectValue("lastName", "notFound", "notFound");
